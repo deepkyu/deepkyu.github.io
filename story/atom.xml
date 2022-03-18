@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://deepkyu.github.io/story</id>
+    <title>Hyoung-Kyu Song Blog</title>
+    <updated>2022-03-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://deepkyu.github.io/story"/>
+    <subtitle>Hyoung-Kyu Song Blog</subtitle>
+    <icon>https://deepkyu.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[안녕하세요]]></title>
+        <id>hello</id>
+        <link href="https://deepkyu.github.io/story/hello"/>
+        <updated>2022-03-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[블로그를 시작합니다.]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="인사">인사<a class="hash-link" href="#인사" title="Direct link to heading">​</a></h2><p>블로그를 시작하게 되었습니다.</p><p>좋은 글로 찾아 뵙겠습니다.</p><p>감사합니다.</p>]]></content>
+        <author>
+            <name>송형규</name>
+            <uri>https://github.com/deepkyu</uri>
+        </author>
+        <category label="story" term="story"/>
+        <category label="hello" term="hello"/>
+    </entry>
+</feed>

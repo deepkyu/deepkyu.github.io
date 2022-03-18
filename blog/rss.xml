@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Hyoung-Kyu Song Blog</title>
+        <link>https://deepkyu.github.io/blog</link>
+        <description>Hyoung-Kyu Song Blog</description>
+        <lastBuildDate>Thu, 17 Feb 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[CES 2022에서 느낀 것들]]></title>
+            <link>https://deepkyu.github.io/blog/ces-2022-review</link>
+            <guid>ces-2022-review</guid>
+            <pubDate>Thu, 17 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[CES에서 느낀 게 많습니다.]]></description>
+            <content:encoded><![CDATA[<img class="figCenter_mKJ5" src="/assets/images/figure1_vegas-0be5f563e9f3989ba0f8c04d02eff756.jpeg" alt="figure1_vegas"><p>제가 어떻게 하다 보니 CES에 다녀 왔어요.</p><img class="figCenter_mKJ5" src="/assets/images/figure2_ces-880bc686b4e86feb756f738482f1b5de.png" alt="figure2_ces"><img class="figCenter_mKJ5" src="/assets/images/figure3_booth-2fb46408aed8378bc785456459e48122.png" alt="figure3_booth"><img class="figCenter_mKJ5" src="/assets/images/figure4_vegas-09c6b4a3c527df17534a946a0c642837.png" alt="figure4_vegas">]]></content:encoded>
+            <category>ces</category>
+            <category>expo</category>
+            <category>review</category>
+        </item>
+    </channel>
+</rss>

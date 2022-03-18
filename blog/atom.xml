@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://deepkyu.github.io/blog</id>
+    <title>Hyoung-Kyu Song Blog</title>
+    <updated>2022-02-17T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://deepkyu.github.io/blog"/>
+    <subtitle>Hyoung-Kyu Song Blog</subtitle>
+    <icon>https://deepkyu.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[CES 2022에서 느낀 것들]]></title>
+        <id>ces-2022-review</id>
+        <link href="https://deepkyu.github.io/blog/ces-2022-review"/>
+        <updated>2022-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[CES에서 느낀 게 많습니다.]]></summary>
+        <content type="html"><![CDATA[<img class="figCenter_mKJ5" src="/assets/images/figure1_vegas-0be5f563e9f3989ba0f8c04d02eff756.jpeg" alt="figure1_vegas"><p>제가 어떻게 하다 보니 CES에 다녀 왔어요.</p><img class="figCenter_mKJ5" src="/assets/images/figure2_ces-880bc686b4e86feb756f738482f1b5de.png" alt="figure2_ces"><img class="figCenter_mKJ5" src="/assets/images/figure3_booth-2fb46408aed8378bc785456459e48122.png" alt="figure3_booth"><img class="figCenter_mKJ5" src="/assets/images/figure4_vegas-09c6b4a3c527df17534a946a0c642837.png" alt="figure4_vegas">]]></content>
+        <author>
+            <name>Hyoung-Kyu Song</name>
+            <uri>https://github.com/deepkyu</uri>
+        </author>
+        <category label="ces" term="ces"/>
+        <category label="expo" term="expo"/>
+        <category label="review" term="review"/>
+    </entry>
+</feed>
