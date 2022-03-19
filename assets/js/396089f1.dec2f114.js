@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[893],{8372:function(e){e.exports=JSON.parse('{"paper-review":{"allTagsPath":"/papers/tags","slug":"/papers/tags/paper-review","name":"paper-review","count":1,"permalink":"/papers/tags/paper-review"}}')}}]);
