@@ -21,7 +21,11 @@ import figResultCompare from './image/result_compare.png';
 import figTrainingMethod from './image/training_method.png';
 import figVsStylegan from './image/vs_stylegan2.png';
 
-*NeurIPS 2020. Jun-Yan Zhu and Song Han.*
+[![arXiv](https://img.shields.io/badge/arXiv-2006.10738-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2006.10738)
+[![githubio](https://img.shields.io/static/v1?message=Official%20Repo&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://github.com/mit-han-lab/data-efficient-gans)
+
+> Zhao, Shengyu, et al. "Differentiable augmentation for data-efficient gan training."  
+> Advances in Neural Information Processing Systems 33 (2020): 7559-7570.
 
 참고로 Song Han 연구실은 Neural Network Compression 분야에 있어 Top을 달리고 있는 연구실이다. 후에 소개할 AnycostGAN에서도 DiffAugment가 언급이 된다.
 
@@ -117,16 +121,16 @@ CIFAR-10 데이터 10%에 대해서만 학습을 했을 때, generalize가 될 �
 
 ### Regularization
 
-:::note
+:::tip
 
-💡 **R1 Regularization**  
+**R1 Regularization**  
 Gradient Penalty로 regularize 하는 방식으로, Discriminator의 Real Data에 대해 Penalize를 준다.
 
 $$
 R_{1}(\psi):=\frac{\gamma}{2} \mathrm{E}_{p_{\mathcal{D}}(x)}\left[\left\|\nabla D_{\psi}(x)\right\|^{2}\right]
 $$
 
-when the generator distribution produces the true data distribution and the discriminator is equal to 0 on the data manifold, the gradient penalty ensures that the discriminator cannot create a non-zero gradient orthogonal to the data manifold without suffering a loss in the GAN game.
+> when the generator distribution produces the true data distribution and the discriminator is equal to 0 on the data manifold, the gradient penalty ensures that the discriminator cannot create a non-zero gradient orthogonal to the data manifold without suffering a loss in the GAN game.
 
 :::
 
