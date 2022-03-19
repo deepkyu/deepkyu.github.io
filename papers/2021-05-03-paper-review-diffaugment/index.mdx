@@ -1,0 +1,139 @@
+---
+slug: diffaugment
+title: "Differentiable Augmentation for Data-Efficient GAN Training"
+description: 적은 데이터로 효율적으로 GAN 학습하는 방법을 확인해봅니다.
+image: img/default.png
+authors: [hkyu]
+tags: [paper-review, gan]
+---
+
+import clsx from 'clsx';
+import styles from '../blog.module.css';
+
+import figAblation from './image/ablation_augmentation.png';
+import figAugResult from './image/augmentation_type_result.png';
+import figAugType from './image/augmentation_type.png';
+import figOverfitting from './image/d_overfitting.png';
+import figInterpolation from './image/interpolation.png';
+import figModelSize from './image/model_size_fid.png';
+import figReg from './image/r1_regularization.png';
+import figResultCompare from './image/result_compare.png';
+import figTrainingMethod from './image/training_method.png';
+import figVsStylegan from './image/vs_stylegan2.png';
+
+*NeurIPS 2020. Jun-Yan Zhu and Song Han.*
+
+참고로 Song Han 연구실은 Neural Network Compression 분야에 있어 Top을 달리고 있는 연구실이다. 후에 소개할 AnycostGAN에서도 DiffAugment가 언급이 된다.
+
+Han Lab은 기존에는 방법론에 있어 Network Pruning, KD(Knowledge Distillation) 등에 집중을 했고, TinyTL 등 Activation에 대한 경량화도 연구를 진행했다. 다만, 대부분 Task가 Image Recognition에 국한되어 있었다. Song Han은 CVPR2020에서 GAN Compression이라는 논문을 통해 Image Generation에 대한 Compression 논문을 시작으로, GAN 관련 연구를 지속해서 이어오고 있다. 
+
+## 배경 지식
+
+### 기존의 Regularization
+
+GAN Training 자체가 굉장히 Unstable한 Process이기 때문에, 추가적인 Regularization이 많이 필요하다. 지금까지 여러가지 Regularization 방식들이 등장했다.
+
+- Instance Noise
+- Jensen-Shannon Regularization
+- Gradient Penalty
+- Spectral Normalization
+- Adversarial Defense Regularization
+- Consistency Regularization
+
+이러한 Regularization Method들은 Input 이미지에 대해 대응하는 것이지, augmentation에 대해 소화할 수 있는 방법들이 아니다.
+
+저자는 여러 가지 Augmentation에 대해서도 잘 working 하는 Discriminator를 구축하고자 했다.
+
+### D는 지금까지 Overfitting 해왔다
+
+<img className={styles.figCenter} src={figOverfitting} alt="d_overfitting" />
+
+BigGAN을 적은 데이터에 대해 학습했을 때, 학습을 하다가 collapse하는 걸 보여주는 Figure다. 왼쪽에서 보면 빨간색(CIFAR-10 10%만 가지고 학습) 그래프가 튀어버리는 걸 볼 수 있다. 이게 왜 그럴까 하고 Discriminator를 보면, 아니나 다를까 Training Accuracy가 빠르게 학습이 돼서 그렇다.
+
+그런데 D에 대해 각 Iteration에 대한 Validation Acc.를 측정해보면, mode collapse가 되었다는 걸 볼 수 있다. 즉, D가 training set 을 memorize 해왔고, 이로 인해 generalize가 안됐다는 걸 보여준다.
+
+## Training Method
+
+<img className={clsx(styles.figCenter, styles.medium)} src={figTrainingMethod} alt="training_method" />
+
+DiffAugment의 학습 방법을 보여주는 그림.
+
+원본 이미지(x), 생성한 이미지(G(z)) 모두에 augmentation(T)을 적용한다.
+
+Augmentation Senario에 따라서 여러 가지 Case로 나눌 수 있다.
+
+Augment Reals Only: Real 이미지에 대해만 Augmentation을 진행함 (i만 진행.)
+→ Augmentation 한 걸 그대로 모방하여 생성한다.
+
+Augment D Only: Discriminator에 넣는 Input들에 대해 진행함 (i, ii 만 진행. iii는 그대로)
+→ Unbalanced Optimization 에 의해 Diverge 해버린다.
+
+D perfectly classifies the augmented images (both T(x) and T(G(z)) but barely
+recognizes G(z) (i.e., fake images without augmentation)
+이 때문에 G의 gradient update를 할 때, Discriminator가 잘 working 하지 못하면서, G에 대한 학습에 방해가 됨.
+
+## Result
+
+### StyleGAN2와 비교
+
+<img className={styles.figCenter} src={figVsStylegan} alt="vs_stylegan2" />
+
+기존 StyleGAN2과 본 논문에서 제시하는 DiffAugment를 적용했을 때를 비교하는 Figure.  
+StyleGAN2는 데이터가 작아질수록, FID, IS 값의 변화가 dramatic한데, DiffAugment는 상대적으로 적은 데이터에 대해서도 generalize되어 있다는 걸 볼 수 있다. StyleGAN2가 작은 데이터에 generalize가 안된다는 건 좀 알려진 사실이었으니, Discriminator Training Method에 집중한 ADA나 Freeze D와 비교하는 Figure를 자연스럽게 기대하게 된다.
+
+### Low-Shot Generation
+
+<img className={styles.figCenter} src={figResultCompare} alt="result_compare" />
+
+Low-shot generation without pre-training.
+
+각각 오바마 100장, 고양이 160장, 강아지 389장만을 가지고 학습을 하여 생성해낸 이미지들이다. (w/o pre-training)
+
+## Result
+
+### Training Performance
+
+<img className={styles.figCenter} src={figAugResult} alt="augmentation_type_result" />
+
+Augmentation 조합에 따라 달라지는 DiffAugment Training Performance (CIFAR-10 Data 100% 사용)
+
+BigGAN 대비 Discriminator가 Validation에 있어서도 generalize 하여 학습되었다고 볼 수 있다. DiffAugment 자체는 Low Dataset에 대해서도 Generation을 안정적으로 할 수 있다는 Novelty를 가지고 있지만, 본 Figure는 BigGAN도 학습했다고 하는 데이터가 CIFAR-10 전체를 사용한 것이었으니, 해당 조건으로 Comparison을 한 것으로 해석할 수 있다.
+
+### Interpolation도 가능하다
+
+<img className={styles.figCenter} src={figInterpolation} alt="interpolation" />
+
+Style Space에서 Interpolation이 가능함을 보여주는 Figure.
+
+적은 데이터였지만 (오바마, 고양이, 강아지 참조), Interpolation이 가능할 정도로 generalize하게 학습이 되었다.
+
+### Model Size에 대한 분석
+
+<img className={styles.figCenter} src={figModelSize} alt="model_size_fid" />
+
+Model size가 FID에 얼마나 영향을 주는가에 대한 Figure
+
+CIFAR-10 데이터 10%에 대해서만 학습을 했을 때, generalize가 될 수 있는 가를 다룬 부분이다. BigGAN 대비 channel size를 줄여가며 비교를 해봐도, 어떤 capacity든 상관없이 더 좋은 성능을 보여준다. StyleGAN2에서 사용하는 R1 Regularization 관련해서도, hyperparameter가 동일한 세팅일 때 더 나은 FID를 보여줬다.
+
+### Regularization
+
+:::note
+
+💡 **R1 Regularization**  
+Gradient Penalty로 regularize 하는 방식으로, Discriminator의 Real Data에 대해 Penalize를 준다.
+
+$$
+R_{1}(\psi):=\frac{\gamma}{2} \mathrm{E}_{p_{\mathcal{D}}(x)}\left[\left\|\nabla D_{\psi}(x)\right\|^{2}\right]
+$$
+
+when the generator distribution produces the true data distribution and the discriminator is equal to 0 on the data manifold, the gradient penalty ensures that the discriminator cannot create a non-zero gradient orthogonal to the data manifold without suffering a loss in the GAN game.
+
+:::
+
+### Ablation for Augmentation
+
+<img className={styles.figCenter} src={figAblation} alt="ablation_augmentation" />
+
+여러 가지 Augmentation에 대해 FID를 확인해본 결과다.
+Ablation을 진행한 끝에, color distortion, translation, cutout만 준 것으로 확인했다. (먼저 생각하고 준 건 아닌 것으로 확인했다.)
+StyleGAN2의 FID이고, CIFAR-10 10% 데이터만을 가지고 Training 했을 때의 결과다.
