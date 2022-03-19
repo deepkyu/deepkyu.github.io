@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Hyoung-Kyu Song',
-  tagline: 'AI Researcher',
+  tagline: '블로그',
   url: 'https://deepkyu.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -69,7 +69,7 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'All posts',
+          blogSidebarTitle: 'All Posts',
           showReadingTime: true,
           // Please change this to your repo.
           postsPerPage: 1,
