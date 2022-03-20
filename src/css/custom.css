@@ -77,7 +77,7 @@ html[data-theme='dark'] .navbar__logo {
   color: #F5F6F7;
 }
 
-#main-page .navbar__logo {
+#main-page .navbar__inner .navbar__logo{
   content: url(../../static/img/logo_white.svg);
 }
 
@@ -87,3 +87,4 @@ html[data-theme='dark'] .navbar__logo {
   right: 0;
   left: 0;
 }
+
