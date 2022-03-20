@@ -59,11 +59,31 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.navbar .navbar__logo {
+.navbar__logo {
   height: 1.5em;
 }
 
-html[data-theme='dark'] .navbar .navbar__logo {
-  height: 1.5em;
+html[data-theme='dark'] .navbar__logo {
   content: url(../../static/img/logo_white.svg);
+}
+
+#main-page .navbar{
+  background-color: transparent;
+  box-shadow: none;
+  color: #F5F6F7;
+}
+
+#main-page .navbar__link {
+  color: #F5F6F7;
+}
+
+#main-page .navbar__logo {
+  content: url(../../static/img/logo_white.svg);
+}
+
+#main-page .navbar--fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }

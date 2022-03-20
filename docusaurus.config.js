@@ -20,6 +20,10 @@ const config = {
   projectName: 'deepkyu.github.io', // Usually your repo name.
   trailingSlash: false,
 
+  scripts: [
+    require.resolve('./src/js/scroll.js'),
+  ],
+
   plugins: [
     [
       '@docusaurus/plugin-content-blog',

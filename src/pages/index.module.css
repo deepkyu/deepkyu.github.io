@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 12rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -13,23 +13,13 @@
   background-size: cover;
 }
 
-html[data-theme='dark'] .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../../static/img/background.jpg);
-  background-position: center ;
-  background-size: cover;
-}
-
-html[data-theme='dark'] .heroTitle {
-  color: var(--ifm-footer-background-color);
+.heroTitle {
+  color: #F5F6F7;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 6rem;
   }
 }
 
@@ -37,4 +27,9 @@ html[data-theme='dark'] .heroTitle {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.navbar--fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
 }
