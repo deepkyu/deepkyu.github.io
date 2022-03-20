@@ -8,6 +8,13 @@
     max-width: 80%;
 }
 
+@media screen and (max-width: 996px) {
+    .small .medium {
+        max-width: 100%;
+    }
+
+  }
+
 .figCenter
 {
     margin: 0 auto;

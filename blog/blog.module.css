@@ -1,12 +1,19 @@
 .small
 {
-    max-width: 400px;
+    max-width: 60%;
 }
 
 .medium
 {
-    max-width: 500px;
+    max-width: 80%;
 }
+
+@media screen and (max-width: 996px) {
+    .small .medium {
+        max-width: 100%;
+    }
+
+  }
 
 .figCenter
 {
