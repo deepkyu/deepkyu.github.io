@@ -21,7 +21,7 @@ const config = {
   trailingSlash: false,
 
   scripts: [
-    require.resolve('./src/js/scroll.js'),
+    'js/scroll.js',
   ],
 
   plugins: [
