@@ -58,7 +58,7 @@ const config = {
         blogSidebarTitle: 'All Posts',
         showReadingTime: true,
         // Please change this to your repo.
-        postsPerPage: 1,
+        postsPerPage: 10,
       },
     ],
   ],
@@ -123,14 +123,14 @@ const config = {
           },
           {
             to: '/papers',
-            label: 'Reviews',
+            label: 'Paper Reviews',
             position: 'left'
           },
-          {
-            to: '/story',
-            label: 'Story',
-            position: 'left'
-          },
+          // {
+          //   to: '/story',
+          //   label: 'Story',
+          //   position: 'left'
+          // },
           {
             href: '/cv',
             label: 'CV',
