@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7923],{4434:function(e){e.exports=JSON.parse('{"allTagsPath":"/papers/tags","slug":"/papers/tags/paper-review","name":"paper-review","count":4,"permalink":"/papers/tags/paper-review"}')}}]);
