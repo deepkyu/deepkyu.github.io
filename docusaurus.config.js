@@ -126,11 +126,11 @@ const config = {
             label: 'Paper Reviews',
             position: 'left'
           },
-          {
-            to: '/story',
-            label: 'Story',
-            position: 'left'
-          },
+          // {
+          //   to: '/story',
+          //   label: 'Story',
+          //   position: 'left'
+          // },
           {
             href: '/cv',
             label: 'CV',
