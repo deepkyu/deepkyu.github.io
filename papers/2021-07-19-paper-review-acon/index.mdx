@@ -33,6 +33,15 @@ import figResultFive from './image/figure13_result5.png';
 
 :::
 
+## Contribution
+
+- Activation function들에 대해 기존 Maxout family에 해당하는 일반화를 넘어 **ACON Family**라는 개념으로 확장하여 일반화를 합니다.
+- 이를 통해 ACON Family에서 각 activation을 결정 짓는 parameter 자체를 learnable하게 하여 **acon** 이라는 activation을 새롭게 제시합니다.
+- 기존 Swish 는 NAS로 찾은 activation으로서, 더 좋다는 것만 알 뿐, 왜 좋은지를 몰랐는데, **ACON Family**에 대응하여 봤을 때, 이를 어느정도 설명할 수 있게 됩니다.
+
+<!--truncate-->
+
+
 ## 먼저 알면 좋은 것들
 
 ### Swish Activation Function [<sup>[1]</sup>](#r1)
@@ -222,8 +231,4 @@ CVPR 2021에서 이러한 논문도 발표된다는 것을 함께 공유하고 �
 
 
 
-### TL;DR
 
-- Activation function들에 대해 기존 Maxout family에 해당하는 일반화를 넘어 **ACON Family**라는 개념으로 확장하여 일반화를 합니다.
-- 이를 통해 ACON Family에서 각 activation을 결정 짓는 parameter 자체를 learnable하게 하여 **acon** 이라는 activation을 새롭게 제시합니다.
-- 기존 Swish 는 NAS로 찾은 activation으로서, 더 좋다는 것만 알 뿐, 왜 좋은지를 몰랐는데, **ACON Family**에 대응하여 봤을 때, 이를 어느정도 설명할 수 있게 됩니다.
