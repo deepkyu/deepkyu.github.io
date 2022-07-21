@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://deepkyu.github.io/blog</id>
+    <id>https://deepkyu.me/blog</id>
     <title>Hyoung-Kyu Song Blog</title>
     <updated>2022-02-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://deepkyu.github.io/blog"/>
+    <link rel="alternate" href="https://deepkyu.me/blog"/>
     <subtitle>Hyoung-Kyu Song Blog</subtitle>
-    <icon>https://deepkyu.github.io/img/favicon.ico</icon>
+    <icon>https://deepkyu.me/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[CES 2022에서 느낀 것들]]></title>
         <id>ces-2022-review</id>
-        <link href="https://deepkyu.github.io/blog/ces-2022-review"/>
+        <link href="https://deepkyu.me/blog/ces-2022-review"/>
         <updated>2022-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[CES에서 느낀 게 많습니다.]]></summary>
         <content type="html"><![CDATA[<div class="admonition admonition-info alert alert--info"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</h5></div><div class="admonition-content"><p>이번 CES 2022에는 마인즈랩의 AI Human을 전시 및 소개하기 위해 다녀왔습니다.<br>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://deepkyu.github.io/papers</id>
+    <id>https://deepkyu.me/papers</id>
     <title>Hyoung-Kyu Song Blog</title>
     <updated>2021-07-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://deepkyu.github.io/papers"/>
+    <link rel="alternate" href="https://deepkyu.me/papers"/>
     <subtitle>Hyoung-Kyu Song Blog</subtitle>
-    <icon>https://deepkyu.github.io/img/favicon.ico</icon>
+    <icon>https://deepkyu.me/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Activate or Not: Learning Customized Activation]]></title>
         <id>acon</id>
-        <link href="https://deepkyu.github.io/papers/acon"/>
+        <link href="https://deepkyu.me/papers/acon"/>
         <updated>2021-07-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Swish와 ReLU와의 관계를 설명하고, 학습이 가능한 활성함수를 소개합니다.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://arxiv.org/abs/2009.04759" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/arXiv-2009.04759-brightgreen.svg?style=flat-square" alt="arXiv"></a>
@@ -29,7 +29,7 @@
     <entry>
         <title type="html"><![CDATA[Anycost GANs for Interactive Image Synthesis and Editing]]></title>
         <id>anycost</id>
-        <link href="https://deepkyu.github.io/papers/anycost"/>
+        <link href="https://deepkyu.me/papers/anycost"/>
         <updated>2021-05-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[하나의 GAN Training으로 여러 해상도의 이미지를 생성할 수 있게 한 연구를 소개합니다.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://github.com/mit-han-lab/anycost-gan" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/static/v1?message=Official%20Repo&amp;logo=Github&amp;labelColor=grey&amp;color=blue&amp;logoColor=white&amp;label=%20&amp;style=flat-square" alt="githubio"></a></p><blockquote><p>Lin, Ji, et al. "Anycost gans for interactive image synthesis and editing."
@@ -45,7 +45,7 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognitio
     <entry>
         <title type="html"><![CDATA[Differentiable Augmentation for Data-Efficient GAN Training]]></title>
         <id>diffaugment</id>
-        <link href="https://deepkyu.github.io/papers/diffaugment"/>
+        <link href="https://deepkyu.me/papers/diffaugment"/>
         <updated>2021-05-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[적은 데이터로 효율적으로 GAN 학습하는 방법을 확인해봅니다.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://github.com/mit-han-lab/data-efficient-gans" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/static/v1?message=Official%20Repo&amp;logo=Github&amp;labelColor=grey&amp;color=blue&amp;logoColor=white&amp;label=%20&amp;style=flat-square" alt="githubio"></a></p><blockquote><p>Zhao, Shengyu, et al. "Differentiable augmentation for data-efficient gan training."<br>
@@ -68,7 +68,7 @@ StyleGAN2의 FID이고, CIFAR-10 10% 데이터만을 가지고 Training 했을 �
     <entry>
         <title type="html"><![CDATA[FreezeD: a Simple Baseline for Fine-tuning GANs]]></title>
         <id>freezed</id>
-        <link href="https://deepkyu.github.io/papers/freezed"/>
+        <link href="https://deepkyu.me/papers/freezed"/>
         <updated>2020-09-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[GAN Finetuning 시에 Discriminator를 Freezing 하면 어떻게 될까요?]]></summary>
         <content type="html"><![CDATA[<p><a href="https://github.com/sangwoomo/FreezeD" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/static/v1?message=Official%20Repo&amp;logo=Github&amp;labelColor=grey&amp;color=blue&amp;logoColor=white&amp;label=%20&amp;style=flat-square" alt="githubio"></a></p><blockquote><p>Mo, Sangwoo, et al. "Freeze the discriminator: a simple baseline for fine-tuning gans."<br>

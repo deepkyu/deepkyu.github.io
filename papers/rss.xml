@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Hyoung-Kyu Song Blog</title>
-        <link>https://deepkyu.github.io/papers</link>
+        <link>https://deepkyu.me/papers</link>
         <description>Hyoung-Kyu Song Blog</description>
         <lastBuildDate>Mon, 19 Jul 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Activate or Not: Learning Customized Activation]]></title>
-            <link>https://deepkyu.github.io/papers/acon</link>
+            <link>https://deepkyu.me/papers/acon</link>
             <guid>acon</guid>
             <pubDate>Mon, 19 Jul 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Swish와 ReLU와의 관계를 설명하고, 학습이 가능한 활성함수를 소개합니다.]]></description>
@@ -24,7 +24,7 @@
         </item>
         <item>
             <title><![CDATA[Anycost GANs for Interactive Image Synthesis and Editing]]></title>
-            <link>https://deepkyu.github.io/papers/anycost</link>
+            <link>https://deepkyu.me/papers/anycost</link>
             <guid>anycost</guid>
             <pubDate>Fri, 14 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[하나의 GAN Training으로 여러 해상도의 이미지를 생성할 수 있게 한 연구를 소개합니다.]]></description>
@@ -36,7 +36,7 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognitio
         </item>
         <item>
             <title><![CDATA[Differentiable Augmentation for Data-Efficient GAN Training]]></title>
-            <link>https://deepkyu.github.io/papers/diffaugment</link>
+            <link>https://deepkyu.me/papers/diffaugment</link>
             <guid>diffaugment</guid>
             <pubDate>Mon, 03 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[적은 데이터로 효율적으로 GAN 학습하는 방법을 확인해봅니다.]]></description>
@@ -55,7 +55,7 @@ StyleGAN2의 FID이고, CIFAR-10 10% 데이터만을 가지고 Training 했을 �
         </item>
         <item>
             <title><![CDATA[FreezeD: a Simple Baseline for Fine-tuning GANs]]></title>
-            <link>https://deepkyu.github.io/papers/freezed</link>
+            <link>https://deepkyu.me/papers/freezed</link>
             <guid>freezed</guid>
             <pubDate>Thu, 24 Sep 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[GAN Finetuning 시에 Discriminator를 Freezing 하면 어떻게 될까요?]]></description>
