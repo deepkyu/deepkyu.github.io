@@ -33,3 +33,15 @@
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
+
+.profileRelativeSize
+{
+    max-width: 20%;
+    border-radius: 35%;
+}
+
+.figCenter
+{
+    margin: 0 auto;
+    display: block;
+}
