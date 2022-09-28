@@ -16,11 +16,14 @@ import figBlockDesign from './image/figure3-block-design.png';
 import figPretrain from './image/figure4-pretrain.png';
 import figFinetune from './image/figure5-finetune.png';
 
-[github](https://github.com/facebookresearch/ConvNeXt)
+[![arXiv](https://img.shields.io/badge/arXiv-2201.03545-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2201.03545)
+[![githubio](https://img.shields.io/static/v1?message=Official%20Repo&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://github.com/facebookresearch/ConvNeXt)
 
 ## Main Idea
 
 Vision Task에 Transformer 기반 Architecture를 접목하는 ViT의 등장 이후, classification task에 대해 좋은 성능을 보였습니다. ViT 이후에 Swim Transformers 등의 방법론 등은 segmentation이나 object detection에도 transformer를 적용하기 위해 등장한 방법들이었습니다. Swim Transformer의 경우, 여러 ConvNet을 prior로 삼는 hybrid한 방법으로 이를 해결한 것이 특징입니다. 하지만, hybrid하다고 하기에는 기존 Transformer의 힘을 빌린 것일 뿐, ConvNet 자체가 가지고 있는 inductive bias를 최대한 사용한 방법은 아닙니다.
+
+<!--truncate-->
 
 저자는 순수한 ConvNet(Transformer 구조를 곁들이지 않은)의 힘을 확인하고자 기존의 standard ResNet(architecture + 학습 방법론)에서 vision Transformer처럼 학습할 수 있게끔 지금까지 등장해온 여러 Novelty들을 접목해보고자 시도합니다. 특히, vision Transformer 모델들이 등장할 때 항상 새로운 학습 방법론을 함께 들고 나와서 성능 향상을 주장하고는 하는데, 그 학습 방법론들을 기존 ConvNet들에 적용해본 사례가 많이 없습니다. 여러 실험을 통해 최근에 등장한 학습 방법론을 적용하고 convolution block design을 새롭게 디자인하면 더 직관적인 구조로 Transformer에 근접한 성능을 보일 수 있음을 보여줍니다.
 
@@ -106,7 +109,7 @@ ResNeXt 에서는 bottleneck block에서 grouped convolution을 사용함으로�
 
 - ResNet-50: 79.5% -> 80.5% (+1.0%, 누적: +4.4%)
 
-<img className={styles.figCenter} src={figBlock} alt="block" />
+<img className={clsx(styles.figCenter, styles.medium)} src={figBlock} alt="block" />
 
 (a): ResNeXt block / (b): inverted bottleneck / (c): position switch of depthwise conv layer
 
@@ -130,7 +133,7 @@ Vision Transformer에서 사용하는 self-attention은 non-local한 특성을 �
 
 ## 변화6: Activation, Normalization Layer 변경하기
 
-<img className={styles.figCenter} src={figBlockDesign} alt="block-design" />
+<img className={clsx(styles.figCenter, styles.medium)} src={figBlockDesign} alt="block-design" />
 
 가장 우측 ConvNeXt block이 저자가 최종적으로 디자인한 형태입니다. 아래 내용을 모두 확인하시고 저 block에 해당하는 내용들이 잘 반영되었는지 확인해보세요😊.
 
@@ -178,8 +181,8 @@ Augmentation, optimizer 등 여러 부분에서 등장한 최신의 학습 방�
 
 ### (Pre-)Training Settings
 
-<img className={styles.figCenter} src={figPretrain} alt="pretrain" />
+<img className={clsx(styles.figCenter, styles.small)} src={figPretrain} alt="pretrain" />
 
 ### Finetuning Settings
 
-<img className={styles.figCenter} src={figFinetune} alt="finetune" />
+<img className={clsx(styles.figCenter, styles.small)} src={figFinetune} alt="finetune" />

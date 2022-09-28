@@ -1,10 +1,8 @@
-.small
-{
+.small {
     max-width: 60%;
 }
 
-.medium
-{
+.medium {
     max-width: 80%;
 }
 
@@ -15,9 +13,8 @@
 
 }
 
-.figCenter
-{
+.figCenter {
     margin: 0 auto;
     display: block;
-    padding: 20px 0
+    padding: 20px 0;
 }
