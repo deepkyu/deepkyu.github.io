@@ -8,8 +8,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../static/img/background.jpg);
-  background-position: center ;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../static/img/background.png);
+  background-position: center;
   background-size: cover;
 }
 
@@ -34,14 +34,12 @@
   transition: background-color 200ms linear;
 }
 
-.profileRelativeSize
-{
-    max-width: 20%;
-    border-radius: 35%;
+.profileRelativeSize {
+  max-width: 20%;
+  border-radius: 35%;
 }
 
-.figCenter
-{
-    margin: 0 auto;
-    display: block;
+.figCenter {
+  margin: 0 auto;
+  display: block;
 }
