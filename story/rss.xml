@@ -7,13 +7,14 @@
         <lastBuildDate>Fri, 18 Mar 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[안녕하세요]]></title>
             <link>https://deepkyu.me/story/hello</link>
             <guid>hello</guid>
             <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[블로그를 시작합니다.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="인사">인사<a class="hash-link" href="#인사" title="Direct link to heading">​</a></h2><p>블로그를 시작하게 되었습니다.</p><p>좋은 글로 찾아 뵙겠습니다.</p><p>감사합니다.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="인사">인사<a class="hash-link" href="#인사" title="Direct link to heading">​</a></h2><p>블로그를 시작하게 되었습니다.</p><p>좋은 글로 찾아 뵙겠습니다.</p><p>감사합니다.</p>]]></content:encoded>
             <category>story</category>
             <category>hello</category>
         </item>
