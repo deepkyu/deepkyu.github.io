@@ -105,10 +105,10 @@ const config = {
       navbar: {
         // title: 'Placeholder',
         title: '',
-        logo: {
-          alt: 'Deepkyu',
-          src: 'img/logo.svg',
-        },
+        // logo: {
+        //   alt: 'Deepkyu',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           // {
           //   type: 'doc',
