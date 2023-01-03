@@ -71,6 +71,11 @@
 
 #main-page .navbar__link {
   color: #F5F6F7;
+  padding: 12px 36px;
+}
+
+.navbar__link {
+  padding: 12px 36px;
 }
 
 #main-page .navbar--fixed-top {
