@@ -13,8 +13,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div id="header-container" className="container">
-        <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title}</h1>
-        <p className={clsx('hero__subtitle', styles.heroTitle)}>AI Researcher
+        <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title.toUpperCase()}</h1>
+        {/* <p className={clsx('hero__subtitle', styles.heroTitle)}>AI Researcher
           <br /><br />
           <a href="https://github.com/deepkyu">
             <img src="https://camo.githubusercontent.com/f6d50128cb007f85916b7a899da5d94f654dce35a37331c8d28573aef46f4274/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465" alt="GitHub" data-canonical-src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white"></img>
@@ -37,7 +37,7 @@ function HomepageHeader() {
           <a href="https://namecard.kakao.com/deepkyu" rel="nofollow">
             <img src="https://camo.githubusercontent.com/616b5ebfb2b5e0ce0fe6b79f7623e7ba52eca53e53fa5a00bc08dbb5d643ebc3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b616b616f74616c6b2d6666636430302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6b616b616f74616c6b266c6f676f436f6c6f723d303030303030" alt="KakaoTalk" data-canonical-src="https://img.shields.io/badge/kakaotalk-ffcd00.svg?style=for-the-badge&amp;logo=kakaotalk&amp;logoColor=000000"></img>
           </a>
-        </p>
+        </p> */}
         {/* <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -64,7 +64,7 @@ export default function Home() {
         description={`${siteConfig.tagline}`}>
         <HomepageHeader />
         <main>
-          <HomepageFeatures />
+          {/* <HomepageFeatures /> */}
         </main>
       </Layout>
     </div>

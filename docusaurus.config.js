@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hyoung-Kyu Song',
+  title: 'Deepkyu',
   tagline: 'Blog (Korean)',
   url: 'https://deepkyu.me/',
   baseUrl: '/',
