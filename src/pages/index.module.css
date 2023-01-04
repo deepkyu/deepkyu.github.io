@@ -27,30 +27,20 @@
 
 }
 
-.heroTitle {
+.heroTitle, [data-theme='dark'] .heroTitle {
   color: #1D1E1D;
   letter-spacing: 20px;
   font-size: x-large;
-}
-
-[data-theme='dark'] .heroTitle {
-  color: var(--ifm-color-primary-lighter);
-  letter-spacing: 20px;
-  font-size: x-large;
-}
-
-.heroBanner .heroTitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 6rem 0 24rem;
-    min-height: 600px;
-  }
+[data-theme='dark'] .heroTitle {
+  color: var(--ifm-color-primary-lighter);
+}
 
-  [data-theme='dark'] .heroBanner {
+@media screen and (max-width: 996px) {
+  .heroBanner, [data-theme='dark'] .heroBanner {
     padding: 6rem 0 24rem;
     min-height: 600px;
   }
