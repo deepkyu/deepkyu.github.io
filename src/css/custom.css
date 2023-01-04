@@ -5,6 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
   --ifm-color-primary: #06032d;
   --ifm-color-primary-dark: #050329;
@@ -66,16 +68,24 @@
 #main-page .navbar{
   background-color: transparent;
   box-shadow: none;
-  color: #F5F6F7;
+  color: var(--ifm-color-primary-lighter);
 }
 
 #main-page .navbar__link {
-  color: #F5F6F7;
   padding: 12px 36px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #1D1E1D;
+}
+
+[data-theme='dark'] #main-page .navbar__link {
+  color: var(--ifm-color-primary-lighter);
 }
 
 .navbar__link {
   padding: 12px 36px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 #main-page .navbar--fixed-top {
@@ -84,13 +94,5 @@
   right: 0;
   left: 0;
   padding: 40px 60px;
-}
 
-.navbar--fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  max-height: 100px;
-  padding: 40px 60px;
 }

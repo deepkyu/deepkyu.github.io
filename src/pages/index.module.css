@@ -2,9 +2,11 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .heroBanner {
-  padding: 12rem 0 60rem ;
+  padding: 6rem 0 72rem;
+  min-height: 1600px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -13,23 +15,44 @@
   background-size: cover;
 }
 
-html[data-theme='dark'] .heroBanner {
-  padding: 12rem 0 60rem ;
+[data-theme='dark'] .heroBanner {
+  padding: 6rem 0 72rem;
+  min-height: 1600px;
   text-align: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../static/img/background.png);
   background-position: center;
   background-size: cover;
+
 }
 
 .heroTitle {
-  color: #F5F6F7;
+  color: #1D1E1D;
+  letter-spacing: 20px;
+  font-size: x-large;
+}
+
+[data-theme='dark'] .heroTitle {
+  color: var(--ifm-color-primary-lighter);
+  letter-spacing: 20px;
+  font-size: x-large;
+}
+
+.heroBanner .heroTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 6rem;
+    padding: 6rem 0 24rem;
+    min-height: 600px;
+  }
+
+  [data-theme='dark'] .heroBanner {
+    padding: 6rem 0 24rem;
+    min-height: 600px;
   }
 }
 
