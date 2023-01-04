@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://deepkyu.me/blog</id>
-    <title>Hyoung-Kyu Song Blog</title>
+    <title>Deepkyu Blog</title>
     <updated>2022-02-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://deepkyu.me/blog"/>
-    <subtitle>Hyoung-Kyu Song Blog</subtitle>
+    <subtitle>Deepkyu Blog</subtitle>
     <icon>https://deepkyu.me/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[CES 2022에서 느낀 것들]]></title>
