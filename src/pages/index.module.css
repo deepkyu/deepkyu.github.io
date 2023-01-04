@@ -28,11 +28,14 @@
 }
 
 .heroTitle, [data-theme='dark'] .heroTitle {
-  color: #1D1E1D;
   letter-spacing: 20px;
   font-size: x-large;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+}
+
+.heroTitle {
+  color: #1D1E1D;
 }
 
 [data-theme='dark'] .heroTitle {
