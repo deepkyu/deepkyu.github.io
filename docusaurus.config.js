@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -189,11 +190,15 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Deepkyu. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
     }),
 };
+
+const siteConfig = {
+  themeConfig: {
+    prism: {
+      additionalLanguages: ['bash', 'diff', 'json'],
+    }
+  }
+}
 
 module.exports = config;
