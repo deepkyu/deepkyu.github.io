@@ -44,24 +44,24 @@ const config = {
         postsPerPage: 1,
       },
     ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'papers',
-        routeBasePath: 'papers',
-        /**
-         * 사이트 디렉터리 기준으로 상대 경로를 지정합니다.
-         */
-        path: './papers',
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: 'All Posts',
-        showReadingTime: true,
-        // Please change this to your repo.
-        postsPerPage: 10,
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'papers',
+    //     routeBasePath: 'papers',
+    //     /**
+    //      * 사이트 디렉터리 기준으로 상대 경로를 지정합니다.
+    //      */
+    //     path: './papers',
+    //     remarkPlugins: [math],
+    //     rehypePlugins: [katex],
+    //     blogSidebarCount: 'ALL',
+    //     blogSidebarTitle: 'All Posts',
+    //     showReadingTime: true,
+    //     // Please change this to your repo.
+    //     postsPerPage: 10,
+    //   },
+    // ],
   ],
 
   presets: [
@@ -122,11 +122,11 @@ const config = {
             label: 'Blog',
             position: 'left'
           },
-          {
-            to: '/papers',
-            label: 'Paper Reviews',
-            position: 'left'
-          },
+          // {
+          //   to: '/papers',
+          //   label: 'Paper Reviews',
+          //   position: 'left'
+          // },
           // {
           //   to: '/story',
           //   label: 'Story',
@@ -159,10 +159,10 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
-              {
-                label: 'Reviews',
-                to: '/papers',
-              }
+              // {
+              //   label: 'Reviews',
+              //   to: '/papers',
+              // }
             ],
           },
           {
