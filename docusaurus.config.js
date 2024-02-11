@@ -31,9 +31,9 @@ const config = {
       {
         id: 'story',
         routeBasePath: 'story',
-        /**
-         * 사이트 디렉터리 기준으로 상대 경로를 지정합니다.
-         */
+        /*
+          Relative path to site directory
+        */
         path: './story',
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -44,24 +44,24 @@ const config = {
         postsPerPage: 1,
       },
     ],
-    // [
-    //   '@docusaurus/plugin-content-blog',
-    //   {
-    //     id: 'papers',
-    //     routeBasePath: 'papers',
-    //     /**
-    //      * 사이트 디렉터리 기준으로 상대 경로를 지정합니다.
-    //      */
-    //     path: './papers',
-    //     remarkPlugins: [math],
-    //     rehypePlugins: [katex],
-    //     blogSidebarCount: 'ALL',
-    //     blogSidebarTitle: 'All Posts',
-    //     showReadingTime: true,
-    //     // Please change this to your repo.
-    //     postsPerPage: 10,
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'papers',
+        routeBasePath: 'papers',
+        /*
+          Relative path to site directory
+        */
+        path: './papers',
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'All Posts',
+        showReadingTime: true,
+        // Please change this to your repo.
+        postsPerPage: 10,
+      },
+    ],
   ],
 
   presets: [
@@ -106,10 +106,6 @@ const config = {
       navbar: {
         // title: 'Placeholder',
         title: '',
-        logo: {
-          alt: 'Deepkyu',
-          src: 'img/logo.svg',
-        },
         items: [
           // {
           //   type: 'doc',
@@ -122,29 +118,24 @@ const config = {
             label: 'Blog',
             position: 'left'
           },
-          // {
-          //   to: '/papers',
-          //   label: 'Paper Reviews',
-          //   position: 'left'
-          // },
-          // {
-          //   to: '/story',
-          //   label: 'Story',
-          //   position: 'left'
-          // },
+          {
+            to: '/papers',
+            label: 'Paper Reviews',
+            position: 'left'
+          },
+          {
+            to: '/story',
+            label: 'Story (KR)',
+            position: 'left'
+          },
           {
             href: '/cv',
             label: 'CV',
             position: 'right',
           },
           {
-            href: 'https://github.com/deepkyu',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            href: 'https://www.linkedin.com/in/deepkyu',
-            label: 'LinkedIn',
+            href: 'https://linktr.ee/deepkyu',
+            label: 'Linktree',
             position: 'right',
           },
         ],
@@ -159,27 +150,26 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
-              // {
-              //   label: 'Reviews',
-              //   to: '/papers',
-              // }
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'Story',
-                to: '/story',
+                label: 'Paper Reviews',
+                to: '/papers',
               },
+              {
+                label: 'Story (KR)',
+                to: '/left',
+              }
             ],
           },
           {
-            title: 'Community',
+            title: 'Links',
             items: [
               {
                 label: 'GitHub',
                 href: 'https://github.com/deepkyu',
+              },
+              {
+                label: 'Hugging Face',
+                href: 'https://huggingface.co/deepkyu',
               },
               {
                 label: 'LinkedIn',
